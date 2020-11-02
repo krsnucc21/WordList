@@ -1,0 +1,22 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Word Frequency</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>ul { margin-left: 2em; }</style>
+    </head>
+    <body>
+        <h1>Word Frequency</h1>
+        <label for="input_text">Input text:</label>
+        <br>
+        <textarea id="input_text" rows="25" cols="100" oninput="showWordFreq()"></textarea>
+        <textarea id="clipboard_text" style="display:none;"></textarea>
+        <br>
+        <button onclick="copyToClipboard()">Copy results</button>
+        <ul id="word_freq_counters"></ul>
+        <ul id="word_freq_list"></ul>
+        <noscript>You need to allow your browser to run JavaScript for this website to work properly.</noscript>
+        <script src="wordfreq.js"></script>
+    </body>
+</html>

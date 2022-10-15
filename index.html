@@ -1,11 +1,14 @@
 <!doctype html>
 <html>
   <head>
-    <title>Word List 3</title>
+    <title>Word List 4</title>
   </head>
   <body>
-    <script>
-    <?php include('wordlist.txt'); ?>
-    </script>
+    <?php
+        $filename = fopen('wordlist.txt', 'r'); 
+        $file = fread($filename, filesize('wordlist.txt'));
+        echo $file; 
+        fclose($filename);
+    ?>
   </body>
 </html>

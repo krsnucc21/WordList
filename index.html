@@ -1,22 +1,9 @@
 <!doctype html>
 <html>
   <head>
-    <title>Word List 5</title>
+    <title>Word List 6</title>
   </head>
   <body>
-    <input type="file" name="wordlist.txt" id="inputfile">   
-    <pre id="output"></pre>
-    <script type="text/javascript">
-        document.getElementById('inputfile')
-            .addEventListener('change', function() {
-            var fr = new FileReader();
-            fr.onload=function(){
-                document.getElementById('output')
-                        .textContent=fr.result;
-            }
-              
-            fr.readAsText(this.files[0]);
-        })
-    </script>
+    <embed src="wordlist.txt">
   </body>
 </html>

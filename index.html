@@ -4,11 +4,19 @@
     <title>Word List 4</title>
   </head>
   <body>
-    <?php
-        $filename = fopen('wordlist.txt', 'r'); 
-        $file = fread($filename, filesize('wordlist.txt'));
-        echo $file; 
-        fclose($filename);
-    ?>
+    <input type="file" name="wordlist.txt" id="inputfile">   
+    <pre id="output"></pre>
+    <script type="text/javascript">
+        document.getElementById('inputfile')
+            .addEventListener('change', function() {
+            var fr = new FileReader();
+            fr.onload=function(){
+                document.getElementById('output')
+                        .textContent=fr.result;
+            }
+              
+            fr.readAsText(this.files[0]);
+        })
+    </script>
   </body>
 </html>

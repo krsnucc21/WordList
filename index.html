@@ -4,11 +4,6 @@
     <title>Word List</title>
   </head>
   <body>
-    <?php
-    $myfilename = "wordlist.txt";
-    if(file_exists($myfilename)){
-      echo file_get_contents($myfilename);
-    }
-    ?>
+    <?php include('myFile.txt'); ?>
   </body>
 </html>
